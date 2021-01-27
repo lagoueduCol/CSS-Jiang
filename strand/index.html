@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>染色体</title>
+  <style>
+.camera {
+  margin: 100px auto;
+  perspective: 700px;
+  background-color: aqua;
+  width: 200px;
+  height: 200px;
+}
+.container {
+  transform: rotateZ(30deg) translate(60px, -10px);
+}
+.gene {
+  transform-style: preserve-3d;
+  animation: motion 2s linear infinite;
+}
+.gene .strand {
+  background-color: #f00;
+  border: #ff0 solid thin;
+  margin-left: 50px;
+  width: 100px;
+  height: 10px;
+  position: absolute;
+}
+
+@keyframes motion {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.strand:nth-child(1) {
+  transform: rotateY(10deg) translateY(0px);
+}
+.strand:nth-child(2) {
+  transform: rotateY(20deg) translateY(20px);
+}
+.strand:nth-child(3) {
+  transform: rotateY(30deg) translateY(40px);
+}
+.strand:nth-child(4) {
+  transform: rotateY(40deg) translateY(60px);
+}
+.strand:nth-child(5) {
+  transform: rotateY(50deg) translateY(80px);
+}
+.strand:nth-child(6) {
+  transform: rotateY(60deg) translateY(100px);
+}
+.strand:nth-child(7) {
+  transform: rotateY(70deg) translateY(120px);
+}
+.strand:nth-child(8) {
+  transform: rotateY(80deg) translateY(140px);
+}
+.strand:nth-child(9) {
+  transform: rotateY(90deg) translateY(160px);
+}
+.strand:nth-child(10) {
+  transform: rotateY(100deg) translateY(180px);
+}
+  </style>
+</head>
+<body>
+  <div class="camera">
+    <div class="container">
+      <div class="gene">
+        <div class="strand"></div>
+        <div class="strand"></div>
+        <div class="strand"></div>
+        <div class="strand"></div>
+        <div class="strand"></div>
+        <div class="strand"></div>
+        <div class="strand"></div>
+        <div class="strand"></div>
+        <div class="strand"></div>
+        <div class="strand"></div>
+      </div>  
+    </div>
+  </div>
+</body>
+</html>
